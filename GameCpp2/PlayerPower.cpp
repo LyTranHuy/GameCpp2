@@ -36,7 +36,6 @@ void PlayerPower::Init(SDL_Renderer* screen)
   {
     position_list_.clear();
   }
-
   AddPos(20);
   AddPos(60);
   AddPos(100);

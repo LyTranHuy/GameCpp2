@@ -127,7 +127,7 @@ std::vector<ThreatsObject*> MakeThreadList()
 			thread_obj->LoadImg("img//threat_left.png", g_screen);
 			thread_obj->set_clips();
 			thread_obj->InitPlayer();
-			thread_obj->set_xpos(500 + i * 500);
+			thread_obj->set_xpos(500 + i * 1200);
 			thread_obj->set_ypos(200);
 			thread_obj->set_type_move(ThreatsObject::MOVE_IN_SPACE_TH);
 			int pos1 = thread_obj->get_x_pos() - 60;
@@ -147,7 +147,7 @@ std::vector<ThreatsObject*> MakeThreadList()
 			thread_obj3->set_clips();
 			thread_obj3->InitPlayer();
 			thread_obj3->set_input_left(0);
-			thread_obj3->set_xpos(700 + i * 1500);
+			thread_obj3->set_xpos(700 + i * 1800);
 			thread_obj3->set_ypos(250);
 
 			thread_obj3->set_type_move(ThreatsObject::STATIC_TH);
@@ -235,9 +235,10 @@ int main(int argc, char* argv[])
 	unsigned int mark_value = 0;
 
 	bool quit = false;
+	Mix_PlayMusic(g_music, -1);
 	while (!quit)
 	{
-		Mix_PlayMusic(g_music, -1);
+		
 		fps.start();
 		while (SDL_PollEvent(&g_event) != 0)
 		{
