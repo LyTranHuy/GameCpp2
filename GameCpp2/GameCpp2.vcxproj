@@ -55,11 +55,13 @@
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>$(SolutionDir)LibSdl2\SDL2_ttf-2.0.14\include;$(SolutionDir)LibSdl2\SDL2_mixer-2.0.2\include;$(SolutionDir)LibSdl2\SDL2_image-2.0.3\include;$(SolutionDir)LibSdl2\SDL2-2.0.8\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_image.lib;SDL2_mixer.lib;SDL2_ttf.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)LibSdl2\SDL2-2.0.8\lib\x86;$(SolutionDir)LibSdl2\SDL2_mixer-2.0.2\lib\x86;$(SolutionDir)LibSdl2\SDL2_image-2.0.3\lib\x86;$(SolutionDir)LibSdl2\SDL2_ttf-2.0.14\lib\x86;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
